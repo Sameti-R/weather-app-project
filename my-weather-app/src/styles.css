@@ -1,1 +1,51 @@
-
+.myForm {
+  text-align: center;
+  margin-top: 50px;
+  font-size: large;
+  margin-bottom: 30px;
+}
+.searchEngine {
+  width: 30%;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.searchButton {
+  text-align: center;
+  width: 10%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: goldenrod;
+  color: aliceblue;
+}
+.city {
+  display: inline;
+}
+.temperature {
+  text-align: center;
+  font-size: x-large;
+}
+.theLink {
+  text-decoration: none;
+  color: goldenrod;
+}
+.cityDate {
+  text-align: center;
+}
+.dayHour {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.weatherCondition {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: x-large;
+  font-weight: bold;
+  font-style: italic;
+}
+.forecastOne {
+  text-align: center;
+}
+.forecastTwo {
+  text-align: center;
+}

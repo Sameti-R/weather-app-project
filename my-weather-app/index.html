@@ -14,7 +14,46 @@
     <title>My weather App</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <form class="myForm" id="my-form">
+        <input
+          type="text"
+          class="searchEngine"
+          id="search-engine"
+          placeholder="Enter a city"
+          autofocus="on"
+          autocomplete="off"
+        />
+        <input
+          type="submit"
+          class="searchButton"
+          id="search-button"
+          value="Search"
+        />
+      </form>
+      <div class="cityDate">
+        <h1 class="city" id="the-city">Paris</h1>
+        <div class="dayHour">
+          <span class="day">Friday, </span><span class="date">March 31, </span
+          ><span class="hour">3:54 PM</span>
+        </div>
+      </div>
+
+      <div class="temperature" id="temp">
+        <span class="celcius">12</span><a class="theLink" href="">℃</a> |
+        <span class="fahrenheit"></span><a class="theLink" href="">℉ </a>
+      </div>
+      <div class="weatherCondition" id="weather-condition">⛅partly cloudy</div>
+      <div class="forecastOne">
+        <span>Humidity:</span>
+        <span id="humidity">42</span>
+
+        <span>%</span>
+      </div>
+      <div class="forecastTwo">
+        <span>Wind:</span><span id="wind-Speed"> 3</span><span>km</span>
+      </div>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

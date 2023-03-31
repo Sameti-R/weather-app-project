@@ -1,3 +1,12 @@
+.mainPage {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #feffdf;
+}
 .myForm {
   text-align: center;
   margin-top: 50px;
@@ -16,7 +25,7 @@
   height: 40px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: goldenrod;
+  background-color: #ef5a5a;
   color: aliceblue;
 }
 .city {
@@ -28,7 +37,7 @@
 }
 .theLink {
   text-decoration: none;
-  color: goldenrod;
+  color: #ffa952;
 }
 .cityDate {
   text-align: center;
@@ -48,4 +57,17 @@
 }
 .forecastTwo {
   text-align: center;
+  margin-bottom: 50px;
+}
+.forecastThree {
+  font-weight: bold;
+}
+.degreeMax {
+  color: #ef5a5a;
+}
+.degreeMin {
+  color: blue;
+}
+.source {
+  margin-left: 100px;
 }

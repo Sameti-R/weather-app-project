@@ -15,43 +15,78 @@
   </head>
   <body>
     <div class="container">
-      <form class="myForm" id="my-form">
-        <input
-          type="text"
-          class="searchEngine"
-          id="search-engine"
-          placeholder="Enter a city"
-          autofocus="on"
-          autocomplete="off"
-        />
-        <input
-          type="submit"
-          class="searchButton"
-          id="search-button"
-          value="Search"
-        />
-      </form>
-      <div class="cityDate">
-        <h1 class="city" id="the-city">Paris</h1>
-        <div class="dayHour">
-          <span class="day">Friday, </span><span class="date">March 31, </span
-          ><span class="hour">3:54 PM</span>
+      <div class="mainPage">
+        <form class="myForm" id="my-form">
+          <input
+            type="text"
+            class="searchEngine"
+            id="search-engine"
+            placeholder="Enter a city"
+            autofocus="on"
+            autocomplete="off"
+          />
+          <input
+            type="submit"
+            class="searchButton"
+            id="search-button"
+            value="Search"
+          />
+        </form>
+        <div class="cityDate">
+          <h1 class="city" id="the-city">Paris</h1>
+          <div class="dayHour">
+            <span class="day">Friday, </span><span class="date">March 31, </span
+            ><span class="hour">3:54 PM</span>
+          </div>
+        </div>
+
+        <div class="temperature" id="temp">
+          <span class="celcius">12</span><a class="theLink" href="">℃</a> |
+          <span class="fahrenheit"></span><a class="theLink" href="">℉ </a>
+        </div>
+        <div class="weatherCondition" id="weather-condition">
+          ⛅partly cloudy
+        </div>
+        <div class="forecastOne">
+          <span>Humidity:</span>
+          <span id="humidity">42</span>
+
+          <span>%</span>
+        </div>
+        <div class="forecastTwo">
+          <span>Wind:</span><span id="wind-Speed"> 3</span><span>km</span>
+        </div>
+        <div class="row text-center forecastThree">
+          <p class="col">
+            Fri <br />⛅ <br />
+            <span class="degreeMax" id="degree-max"> 15</span>°
+            <span class="degreeMin" id="degree-min">5</span>°
+          </p>
+          <p class="col">
+            Sat <br />🌧 <br />
+            <span class="degreeMax" id="degree-max-one"> 8</span>°
+            <span class="degreeMin" id="degree-min-one">3</span>°
+          </p>
+          <p class="col">
+            Sun <br />🌤 <br />
+            <span class="degreeMax" id="degree-max-two"> 15</span>°
+            <span class="degreeMin" id="degree-min-two">7</span>°
+          </p>
+          <p class="col">
+            Mon <br />☀ <br />
+            <span class="degreeMax" id="degree-max-three"> 18</span>°
+            <span class="degreeMin" id="degree-min-three">10</span>°
+          </p>
+          <p class="col">
+            Tues <br />🌫 <br />
+            <span class="degreeMax" id="degree-max-four"> 8</span>°
+            <span class="degreeMin" id="degree-min-four">5</span>°
+          </p>
         </div>
       </div>
-
-      <div class="temperature" id="temp">
-        <span class="celcius">12</span><a class="theLink" href="">℃</a> |
-        <span class="fahrenheit"></span><a class="theLink" href="">℉ </a>
-      </div>
-      <div class="weatherCondition" id="weather-condition">⛅partly cloudy</div>
-      <div class="forecastOne">
-        <span>Humidity:</span>
-        <span id="humidity">42</span>
-
-        <span>%</span>
-      </div>
-      <div class="forecastTwo">
-        <span>Wind:</span><span id="wind-Speed"> 3</span><span>km</span>
+      <div class="source">
+        <a class="mylink" href="" target="_blank">Open Source,</a>
+        <span class="name"> by Rezvan Sameti</span>
       </div>
     </div>
     <script src="src/index.js"></script>

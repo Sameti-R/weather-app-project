@@ -29,44 +29,28 @@
   color: aliceblue;
 }
 .city {
-  display: inline;
-}
-.temperature {
-  text-align: center;
-  font-size: x-large;
-}
-.theLink {
-  text-decoration: none;
-  color: #ffa952;
-}
-.cityDate {
-  text-align: center;
-}
-.dayHour {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.weatherCondition {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: x-large;
-  font-weight: bold;
+  font-size: 48px;
   font-style: italic;
-}
-.forecastOne {
-  text-align: center;
-}
-.forecastTwo {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.forecastThree {
   font-weight: bold;
 }
-.degreeMax {
-  color: #ef5a5a;
+.dayTime {
+  font-size: 16px;
+  font-weight: bold;
 }
-.degreeMin {
-  color: blue;
+.degree {
+  font-size: 32px;
+  font-weight: bold;
+}
+.symbol {
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  top: -15px;
+}
+.weather {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 .source {
   margin-left: 100px;

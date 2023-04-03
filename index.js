@@ -44,8 +44,14 @@ function showWeather(response) {
   wind.innerHTML = `${windSpeed}`;
   dayTime = document.querySelector("#day-time");
   dayTime.innerHTML = dayFormat(response.data.dt * 1000);
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+let city = "New York";
 let apiKey = "a1181481ea4e88c11541b6fdfb74d7f4";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showWeather);

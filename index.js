@@ -11,12 +11,18 @@ function dayFormat(timestamp) {
     "Saturday",
   ];
   day = weekDays[now.getDay(timestamp)];
-  console.log(day);
+
   hours = now.getHours(timestamp);
-  console.log(hours);
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   minutes = now.getMinutes(timestamp);
-  console.log(minutes);
-  return `Last updated: ${day}, ${hours}:${minutes}`;
+  if (minutes < 10) {
+    minutes = `0${hours}`;
+  }
+
+  return ` ${day}, ${hours}:${minutes}`;
 }
 function showWeather(response) {
   console.log(response.data);

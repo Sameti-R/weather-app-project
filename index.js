@@ -1,6 +1,6 @@
 function dayFormat(timestamp) {
   now = new Date(timestamp);
-  console.log(now);
+
   let weekDays = [
     "Sunday",
     "Monday",
@@ -19,13 +19,12 @@ function dayFormat(timestamp) {
   }
   minutes = now.getMinutes(timestamp);
   if (minutes < 10) {
-    minutes = `0${hours}`;
+    minutes = `0${minutes}`;
   }
 
   return ` ${day}, ${hours}:${minutes}`;
 }
 function showWeather(response) {
-  console.log(response.data);
   let cityName = document.querySelector("#the-city");
 
   cityName.innerHTML = `${response.data.name}`;
@@ -50,8 +49,18 @@ function showWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-let city = "New York";
-let apiKey = "a1181481ea4e88c11541b6fdfb74d7f4";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showWeather);
+function search(city) {
+  let apiKey = "a1181481ea4e88c11541b6fdfb74d7f4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+function showCurrentData(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-engine");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#my-form");
+form.addEventListener("submit", showCurrentData);

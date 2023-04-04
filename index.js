@@ -29,11 +29,11 @@ function showWeather(response) {
 
   cityName.innerHTML = `${response.data.name}`;
 
-  let temperature = Math.round(response.data.main.temp);
+  temperature = response.data.main.temp;
 
   let temp = document.querySelector("#celcius");
 
-  temp.innerHTML = `${temperature}`;
+  temp.innerHTML = `${Math.round(temperature)}`;
   let description = document.querySelector("#weather-condition");
   description.innerHTML = `${response.data.weather[0].description}`;
   let humidity = document.querySelector("#humidity");

@@ -55,3 +55,9 @@
 .source {
   margin-left: 100px;
 }
+.active {
+  color: black;
+}
+.active:hover {
+  cursor: text;
+}

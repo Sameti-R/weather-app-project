@@ -64,3 +64,36 @@ function showCurrentData(event) {
 
 let form = document.querySelector("#my-form");
 form.addEventListener("submit", showCurrentData);
+function searchImperial(city) {
+  let apiKey = "a1181481ea4e88c11541b6fdfb74d7f4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+function changeScaleOne(event) {
+  event.preventDefault();
+
+  let cityInputElement = document.querySelector("#search-engine");
+
+  searchImperial(cityInputElement.value);
+  let windUnit = document.querySelector("#wind-unit");
+  windUnit.innerHTML = "mph";
+  tempC.classList.remove("active");
+  tempF.classList.add("active");
+}
+function changeScaleTwo(event) {
+  event.preventDefault();
+
+  let cityInputElement = document.querySelector("#search-engine");
+
+  search(cityInputElement.value);
+  let windUnit = document.querySelector("#wind-unit");
+  windUnit.innerHTML = "km/h";
+  tempC.classList.add("active");
+  tempF.classList.remove("active");
+}
+
+let tempF = document.querySelector("#imperial-temp");
+tempF.addEventListener("click", changeScaleOne);
+let tempC = document.querySelector("#metric-temp");
+tempC.addEventListener("click", changeScaleTwo);
